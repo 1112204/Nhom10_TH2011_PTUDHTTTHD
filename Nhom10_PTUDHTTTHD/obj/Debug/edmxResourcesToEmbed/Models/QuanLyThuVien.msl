@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanLyThuVienModelStoreContainer" CdmEntityContainer="QuanLyThuVienEntities">
+    <EntitySetMapping Name="DocGias">
+      <EntityTypeMapping TypeName="QuanLyThuVienModel.DocGia">
+        <MappingFragment StoreEntitySet="DocGia">
+          <ScalarProperty Name="id_doc_gia" ColumnName="id_doc_gia" />
+          <ScalarProperty Name="ma_doc_gia" ColumnName="ma_doc_gia" />
+          <ScalarProperty Name="ho_ten" ColumnName="ho_ten" />
+          <ScalarProperty Name="dia_chi" ColumnName="dia_chi" />
+          <ScalarProperty Name="ngay_sinh" ColumnName="ngay_sinh" />
+          <ScalarProperty Name="dien_thoai" ColumnName="dien_thoai" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="gioi_tinh" ColumnName="gioi_tinh" />
+          <ScalarProperty Name="bar_code" ColumnName="bar_code" />
+          <ScalarProperty Name="bar_code_image" ColumnName="bar_code_image" />
+          <ScalarProperty Name="id_loai_doc_gia" ColumnName="id_loai_doc_gia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hinhs">
+      <EntityTypeMapping TypeName="QuanLyThuVienModel.Hinh">
+        <MappingFragment StoreEntitySet="Hinh">
+          <ScalarProperty Name="id_hinh" ColumnName="id_hinh" />
+          <ScalarProperty Name="ten_hinh" ColumnName="ten_hinh" />
+          <ScalarProperty Name="url_hinh" ColumnName="url_hinh" />
+          <ScalarProperty Name="id_doc_gia" ColumnName="id_doc_gia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiDocGias">
+      <EntityTypeMapping TypeName="QuanLyThuVienModel.LoaiDocGia">
+        <MappingFragment StoreEntitySet="LoaiDocGia">
+          <ScalarProperty Name="id_loai_doc_gia" ColumnName="id_loai_doc_gia" />
+          <ScalarProperty Name="ma_loai" ColumnName="ma_loai" />
+          <ScalarProperty Name="ten_loai" ColumnName="ten_loai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/Content/css/justified-nav.css" rel="stylesheet" />
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" />
+    <link href="~/Content/css/custom.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
+
+    @RenderSection("RefreshScript", false)
+
+</head>
+
+@{ 
+    string activeTab = ViewBag.Active; 
+}
+
+<body onresize="refresh()">
+    <div id="main_container">
+        <div class="container" id="@ViewBag.Id">
+            <div class="header">
+                <div class="navbar-header">
+                    <h2><span class="glyphicon glyphicon-book"></span> Hệ thống thư viện</h2>
+                </div>
+                <form action="#" method="get" class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" id="keyword" name="keyword">
+                    </div>
+                    <button type="submit" class="btn btn-default" name="Search">Tìm kiếm</button>
+                </form>
+            </div>
+            <img src="~/Content/images/banner.PNG" alt="header image" class="banner img-responsive cleaner">
+            <div class="masthead" id="masthead">
+                <ul class="nav nav-justified">
+                    <li @if (activeTab == "Home")
+                        { 
+                            @:class="active" 
+                    } ><a href="/home/index">Trang chủ</a></li>
+
+                    <li @if (activeTab == "ThongKeDocGia")
+                        { 
+                            @:class="active" 
+                    } ><a href="/quanlydocgia/thongkedocgia">Thống kê đọc giả</a></li>
+
+                    <li @if (activeTab == "XemDanhSachDocGia")
+                        { 
+                            @:class="active" 
+                    } ><a href="/quanlydocgia/xemdanhsachdocgia">Danh sách đọc giả</a></li>
+
+                    <li @if (activeTab == "PhatSinhMaVach")
+                        { 
+                            @:class="active" 
+                    } ><a href="/quanlydocgia/phatsinhmavach">Phát sinh mã vạch</a></li>
+
+                    <li @if (activeTab == "Contact")
+                        { 
+                            @:class="active" 
+                    } ><a href="/home/contact">Liên hệ</a></li>
+                </ul>
+            </div>
+            @RenderBody()
+        </div>
+        <footer class="container">
+            <div class="credit row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div id="templatemo_footer">
+                        Copyright © @DateTime.Now.Year <a href="#">Nhóm 10 - TH2011 - PTUDHTTTHD</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div style="text-align: right">
+                        <a href="#" rel="nofollow">
+                            <img src="~/Content/images/facebook.png" alt="Like us on Facebook"></a>
+                        <a href="#">
+                            <img src="~/Content/images/twitter.png" alt="Follow us on Twitter"></a>
+                        <a href="#">
+                            <img src="~/Content/images/rss.png" alt="RSS feeds"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

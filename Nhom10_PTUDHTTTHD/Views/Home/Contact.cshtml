@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Liên hệ";
+    ViewBag.Active = "Contact";
+    ViewBag.Id = "contact";
+}
+
+@section RefreshScript {
+    <script>
+        function refresh() {
+            var container = document.getElementById('contact');
+            var masthead = document.getElementById('masthead');
+            var content = document.getElementById('content');
+            container.removeChild(masthead);
+            container.insertBefore(masthead, content);
+        }
+    </script>
+}
+
+<div class="row" id="content">
+    <div class="col-md-12">
+        <h2>Thông tin liên hệ</h2>
+        <h3>Biểu mẫu</h3>
+        <p>Bạn có thể để lại lời nhắn của mình tại đây</p>
+    </div>
+</div>
+<form action="#" method="post" id="contact_form" role="form">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="form-group left-inner-addon">
+                <span class="glyphicon glyphicon-user"></span>
+                <input name="name" type="text" class="form-control" id="input_name" placeholder="Họ tên">
+            </div>
+            <div class="form-group left-inner-addon">
+                <span class="glyphicon glyphicon-envelope"></span>
+                <input name="email" type="email" class="form-control" id="input_email" placeholder="Email">
+            </div>
+            <div class="form-group left-inner-addon">
+                <span class="glyphicon glyphicon-earphone"></span>
+                <input name="phone" type="tel" class="form-control" id="input_tel" placeholder="Điện thoại">
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="form-group left-inner-addon">
+                <span class="glyphicon glyphicon-comment"></span>
+                <textarea name="message" rows="6" class="form-control" id="input_message" placeholder="Lời nhắn..."></textarea><br>
+                <button type="submit" class="btn btn-primary">Gửi</button>
+                <button type="reset" class="btn btn-default right">Reset</button>
+            </div>
+        </div>
+    </div>
+    <!-- row -->
+</form>
+<hr class="featurette-divider">
+

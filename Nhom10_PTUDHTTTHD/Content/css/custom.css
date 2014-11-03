@@ -1,0 +1,21 @@
+﻿/* LTTA - 1112007 */
+.VienKhung
+{
+    border: 1px solid black;
+}
+.TieuDeBang
+{
+    border: 1px solid black;
+    background-color: gray;
+    color: yellow;
+    font-weight:bold;
+    font-style:italic;
+}
+.Dong
+{
+    border: 1px solid black;                
+}
+.NoiDung
+{
+    margin-left:50px;
+}

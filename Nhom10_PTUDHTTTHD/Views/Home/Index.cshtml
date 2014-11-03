@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+    ViewBag.Active = "Home";
+    ViewBag.Id = "home";
+}
+
+@section RefreshScript {
+    <script>
+        function refresh() {
+            var container = document.getElementById('home');
+            var masthead = document.getElementById('masthead');
+            var content = document.getElementById('thumbnails_container');
+            container.removeChild(masthead);
+            container.insertBefore(masthead, content);
+        }
+    </script>
+}
+<!-- nav -->
+<div class="row">
+
+    <div class="col-md-12">
+        <h2>Chào mừng đến với hệ thống thư viện</h2>
+    </div>
+
+</div>
