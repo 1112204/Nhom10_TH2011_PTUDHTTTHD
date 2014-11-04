@@ -28,7 +28,7 @@ namespace Nhom10_PTUDHTTTHD.Models
         public string email { get; set; }
         public string gioi_tinh { get; set; }
         public string bar_code { get; set; }
-        public byte[] bar_code_image { get; set; }
+        public string bar_code_url { get; set; }
         public Nullable<int> id_loai_doc_gia { get; set; }
     
         public virtual LoaiDocGia LoaiDocGia { get; set; }

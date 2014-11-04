@@ -4,16 +4,16 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuanLyThuVienModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QuanLyThuVienModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="QuanLyThuVienModelStoreContainer">
           <EntitySet Name="DocGia" EntityType="QuanLyThuVienModel.Store.DocGia" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Hinh" EntityType="QuanLyThuVienModel.Store.Hinh" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="LoaiDocGia" EntityType="QuanLyThuVienModel.Store.LoaiDocGia" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK__DocGia__id_loai___0519C6AF" Association="QuanLyThuVienModel.Store.FK__DocGia__id_loai___0519C6AF">
+          <AssociationSet Name="FK__DocGia__id_loai___1273C1CD" Association="QuanLyThuVienModel.Store.FK__DocGia__id_loai___1273C1CD">
             <End Role="LoaiDocGia" EntitySet="LoaiDocGia" />
             <End Role="DocGia" EntitySet="DocGia" />
           </AssociationSet>
-          <AssociationSet Name="FK__Hinh__id_doc_gia__09DE7BCC" Association="QuanLyThuVienModel.Store.FK__Hinh__id_doc_gia__09DE7BCC">
+          <AssociationSet Name="FK__Hinh__id_doc_gia__15502E78" Association="QuanLyThuVienModel.Store.FK__Hinh__id_doc_gia__15502E78">
             <End Role="DocGia" EntitySet="DocGia" />
             <End Role="Hinh" EntitySet="Hinh" />
           </AssociationSet>
@@ -31,7 +31,7 @@
           <Property Name="email" Type="nvarchar" MaxLength="100" />
           <Property Name="gioi_tinh" Type="char" MaxLength="1" />
           <Property Name="bar_code" Type="nvarchar" MaxLength="50" />
-          <Property Name="bar_code_image" Type="image" />
+          <Property Name="bar_code_url" Type="nvarchar" MaxLength="100" />
           <Property Name="id_loai_doc_gia" Type="int" />
         </EntityType>
         <EntityType Name="Hinh">
@@ -51,7 +51,7 @@
           <Property Name="ma_loai" Type="nvarchar" Nullable="false" MaxLength="10" />
           <Property Name="ten_loai" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK__DocGia__id_loai___0519C6AF">
+        <Association Name="FK__DocGia__id_loai___1273C1CD">
           <End Role="LoaiDocGia" Type="QuanLyThuVienModel.Store.LoaiDocGia" Multiplicity="0..1" />
           <End Role="DocGia" Type="QuanLyThuVienModel.Store.DocGia" Multiplicity="*" />
           <ReferentialConstraint>
@@ -63,7 +63,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Hinh__id_doc_gia__09DE7BCC">
+        <Association Name="FK__Hinh__id_doc_gia__15502E78">
           <End Role="DocGia" Type="QuanLyThuVienModel.Store.DocGia" Multiplicity="0..1" />
           <End Role="Hinh" Type="QuanLyThuVienModel.Store.Hinh" Multiplicity="*" />
           <ReferentialConstraint>
@@ -75,8 +75,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLyThuVienModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -84,11 +83,11 @@
           <EntitySet Name="DocGias" EntityType="QuanLyThuVienModel.DocGia" />
           <EntitySet Name="Hinhs" EntityType="QuanLyThuVienModel.Hinh" />
           <EntitySet Name="LoaiDocGias" EntityType="QuanLyThuVienModel.LoaiDocGia" />
-          <AssociationSet Name="FK__DocGia__id_loai___0519C6AF" Association="QuanLyThuVienModel.FK__DocGia__id_loai___0519C6AF">
+          <AssociationSet Name="FK__DocGia__id_loai___1273C1CD" Association="QuanLyThuVienModel.FK__DocGia__id_loai___1273C1CD">
             <End Role="LoaiDocGia" EntitySet="LoaiDocGias" />
             <End Role="DocGia" EntitySet="DocGias" />
           </AssociationSet>
-          <AssociationSet Name="FK__Hinh__id_doc_gia__09DE7BCC" Association="QuanLyThuVienModel.FK__Hinh__id_doc_gia__09DE7BCC">
+          <AssociationSet Name="FK__Hinh__id_doc_gia__15502E78" Association="QuanLyThuVienModel.FK__Hinh__id_doc_gia__15502E78">
             <End Role="DocGia" EntitySet="DocGias" />
             <End Role="Hinh" EntitySet="Hinhs" />
           </AssociationSet>
@@ -97,42 +96,42 @@
           <Key>
             <PropertyRef Name="id_doc_gia" />
           </Key>
-          <Property Name="id_doc_gia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="ma_doc_gia" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
-          <Property Name="ho_ten" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="dia_chi" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
-          <Property Name="ngay_sinh" Type="DateTime" Precision="0" />
-          <Property Name="dien_thoai" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
-          <Property Name="email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="gioi_tinh" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
-          <Property Name="bar_code" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="bar_code_image" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="id_loai_doc_gia" Type="Int32" />
-          <NavigationProperty Name="LoaiDocGia" Relationship="QuanLyThuVienModel.FK__DocGia__id_loai___0519C6AF" FromRole="DocGia" ToRole="LoaiDocGia" />
-          <NavigationProperty Name="Hinhs" Relationship="QuanLyThuVienModel.FK__Hinh__id_doc_gia__09DE7BCC" FromRole="DocGia" ToRole="Hinh" />
+          <Property Type="Int32" Name="id_doc_gia" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ma_doc_gia" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ho_ten" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="dia_chi" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="ngay_sinh" Precision="0" />
+          <Property Type="String" Name="dien_thoai" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="email" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="gioi_tinh" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="bar_code" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="bar_code_url" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="id_loai_doc_gia" />
+          <NavigationProperty Name="LoaiDocGia" Relationship="QuanLyThuVienModel.FK__DocGia__id_loai___1273C1CD" FromRole="DocGia" ToRole="LoaiDocGia" />
+          <NavigationProperty Name="Hinhs" Relationship="QuanLyThuVienModel.FK__Hinh__id_doc_gia__15502E78" FromRole="DocGia" ToRole="Hinh" />
         </EntityType>
         <EntityType Name="Hinh">
           <Key>
             <PropertyRef Name="id_hinh" />
           </Key>
-          <Property Name="id_hinh" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="ten_hinh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="url_hinh" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="id_doc_gia" Type="Int32" />
-          <NavigationProperty Name="DocGia" Relationship="QuanLyThuVienModel.FK__Hinh__id_doc_gia__09DE7BCC" FromRole="Hinh" ToRole="DocGia" />
+          <Property Type="Int32" Name="id_hinh" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ten_hinh" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="url_hinh" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="id_doc_gia" />
+          <NavigationProperty Name="DocGia" Relationship="QuanLyThuVienModel.FK__Hinh__id_doc_gia__15502E78" FromRole="Hinh" ToRole="DocGia" />
         </EntityType>
         <EntityType Name="LoaiDocGia">
           <Key>
             <PropertyRef Name="id_loai_doc_gia" />
           </Key>
-          <Property Name="id_loai_doc_gia" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="ma_loai" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
-          <Property Name="ten_loai" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="DocGias" Relationship="QuanLyThuVienModel.FK__DocGia__id_loai___0519C6AF" FromRole="LoaiDocGia" ToRole="DocGia" />
+          <Property Type="Int32" Name="id_loai_doc_gia" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ma_loai" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ten_loai" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DocGias" Relationship="QuanLyThuVienModel.FK__DocGia__id_loai___1273C1CD" FromRole="LoaiDocGia" ToRole="DocGia" />
         </EntityType>
-        <Association Name="FK__DocGia__id_loai___0519C6AF">
-          <End Role="LoaiDocGia" Type="QuanLyThuVienModel.LoaiDocGia" Multiplicity="0..1" />
-          <End Role="DocGia" Type="QuanLyThuVienModel.DocGia" Multiplicity="*" />
+        <Association Name="FK__DocGia__id_loai___1273C1CD">
+          <End Type="QuanLyThuVienModel.LoaiDocGia" Role="LoaiDocGia" Multiplicity="0..1" />
+          <End Type="QuanLyThuVienModel.DocGia" Role="DocGia" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LoaiDocGia">
               <PropertyRef Name="id_loai_doc_gia" />
@@ -142,9 +141,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Hinh__id_doc_gia__09DE7BCC">
-          <End Role="DocGia" Type="QuanLyThuVienModel.DocGia" Multiplicity="0..1" />
-          <End Role="Hinh" Type="QuanLyThuVienModel.Hinh" Multiplicity="*" />
+        <Association Name="FK__Hinh__id_doc_gia__15502E78">
+          <End Type="QuanLyThuVienModel.DocGia" Role="DocGia" Multiplicity="0..1" />
+          <End Type="QuanLyThuVienModel.Hinh" Role="Hinh" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DocGia">
               <PropertyRef Name="id_doc_gia" />
@@ -163,36 +162,36 @@
           <EntitySetMapping Name="DocGias">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.DocGia">
               <MappingFragment StoreEntitySet="DocGia">
-                <ScalarProperty Name="id_doc_gia" ColumnName="id_doc_gia" />
-                <ScalarProperty Name="ma_doc_gia" ColumnName="ma_doc_gia" />
-                <ScalarProperty Name="ho_ten" ColumnName="ho_ten" />
-                <ScalarProperty Name="dia_chi" ColumnName="dia_chi" />
-                <ScalarProperty Name="ngay_sinh" ColumnName="ngay_sinh" />
-                <ScalarProperty Name="dien_thoai" ColumnName="dien_thoai" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="gioi_tinh" ColumnName="gioi_tinh" />
-                <ScalarProperty Name="bar_code" ColumnName="bar_code" />
-                <ScalarProperty Name="bar_code_image" ColumnName="bar_code_image" />
                 <ScalarProperty Name="id_loai_doc_gia" ColumnName="id_loai_doc_gia" />
+                <ScalarProperty Name="bar_code_url" ColumnName="bar_code_url" />
+                <ScalarProperty Name="bar_code" ColumnName="bar_code" />
+                <ScalarProperty Name="gioi_tinh" ColumnName="gioi_tinh" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="dien_thoai" ColumnName="dien_thoai" />
+                <ScalarProperty Name="ngay_sinh" ColumnName="ngay_sinh" />
+                <ScalarProperty Name="dia_chi" ColumnName="dia_chi" />
+                <ScalarProperty Name="ho_ten" ColumnName="ho_ten" />
+                <ScalarProperty Name="ma_doc_gia" ColumnName="ma_doc_gia" />
+                <ScalarProperty Name="id_doc_gia" ColumnName="id_doc_gia" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Hinhs">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.Hinh">
               <MappingFragment StoreEntitySet="Hinh">
-                <ScalarProperty Name="id_hinh" ColumnName="id_hinh" />
-                <ScalarProperty Name="ten_hinh" ColumnName="ten_hinh" />
-                <ScalarProperty Name="url_hinh" ColumnName="url_hinh" />
                 <ScalarProperty Name="id_doc_gia" ColumnName="id_doc_gia" />
+                <ScalarProperty Name="url_hinh" ColumnName="url_hinh" />
+                <ScalarProperty Name="ten_hinh" ColumnName="ten_hinh" />
+                <ScalarProperty Name="id_hinh" ColumnName="id_hinh" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LoaiDocGias">
             <EntityTypeMapping TypeName="QuanLyThuVienModel.LoaiDocGia">
               <MappingFragment StoreEntitySet="LoaiDocGia">
-                <ScalarProperty Name="id_loai_doc_gia" ColumnName="id_loai_doc_gia" />
-                <ScalarProperty Name="ma_loai" ColumnName="ma_loai" />
                 <ScalarProperty Name="ten_loai" ColumnName="ten_loai" />
+                <ScalarProperty Name="ma_loai" ColumnName="ma_loai" />
+                <ScalarProperty Name="id_loai_doc_gia" ColumnName="id_loai_doc_gia" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

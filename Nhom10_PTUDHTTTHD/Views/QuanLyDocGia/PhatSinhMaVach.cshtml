@@ -3,3 +3,16 @@
 }
 
 <h2>Phát sinh mã vạch</h2>
+
+<script src="~/Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>  
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+<script src="~/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+
+
+@using (Ajax.BeginForm("GetBarcode", new AjaxOptions { UpdateTargetId = "response" }))
+{
+    <label>ID độc giả</label><br />
+    <input type="text" name="id_doc_gia" />
+    <input type="submit" value="Phát sinh mã vạch"/><br /><br />
+}
+<div id="response"></div>

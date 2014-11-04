@@ -5,11 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="5d4d361f5b234c32acebc2d4bb2879d8" Name="Diagram1">
-        <EntityTypeShape EntityType="QuanLyThuVienModel.DocGia" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.Hinh" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyThuVienModel.LoaiDocGia" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
-        <AssociationConnector Association="QuanLyThuVienModel.FK__DocGia__id_loai___0519C6AF" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyThuVienModel.FK__Hinh__id_doc_gia__09DE7BCC" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.DocGia" Width="1.5" PointX="8.1523422208392731" PointY="4.2072316874783633" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.Hinh" Width="1.5" PointX="11.375" PointY="5.625" />
+        <EntityTypeShape EntityType="QuanLyThuVienModel.LoaiDocGia" Width="1.5" PointX="7" PointY="5.875" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK__DocGia__id_loai___1273C1CD" />
+        <AssociationConnector Association="QuanLyThuVienModel.FK__Hinh__id_doc_gia__15502E78" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

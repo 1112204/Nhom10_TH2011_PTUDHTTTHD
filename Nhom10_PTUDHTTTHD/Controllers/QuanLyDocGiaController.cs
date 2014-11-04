@@ -1,9 +1,11 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Nhom10_PTUDHTTTHD.Models;
+using OnBarcode.Barcode.ASPNET;
 
 namespace Nhom10_PTUDHTTTHD.Controllers
 {
@@ -73,6 +75,33 @@ namespace Nhom10_PTUDHTTTHD.Controllers
         public ActionResult PhatSinhMaVach()
         {
             return View();
+        }
+
+        //AjaxAction
+        public string GetBarcode(string id_doc_gia)
+        {
+            string fname = id_doc_gia + ".png";
+            string path = AppDomain.CurrentDomain.BaseDirectory + "temp/" + fname;
+            string bar_code = id_doc_gia;
+            string bar_code_url = "/temp/" + fname;
+            OnBarcode.Barcode.Linear barcode = new OnBarcode.Barcode.Linear();
+            barcode.Type = OnBarcode.Barcode.BarcodeType.CODE39;
+            barcode.Data = id_doc_gia;
+            barcode.drawBarcode(path);
+            return "<form action='SaveBarcode' method='post'><input type='hidden' name='id_doc_gia' value='" + id_doc_gia + "'/><label>Mã thẻ</label><br /><input type='text' name='bar_code' value='" + bar_code + "'/><br /><br /><label>Mã vạch:</label><br /><input type='hidden' name='bar_code_url' value='" + bar_code_url + "'/><img src='" + bar_code_url + "' /><br /><br /><input type='submit' value='Lưu'/></form>";
+        }
+
+        public ActionResult SaveBarcode(string id_doc_gia, string bar_code, string bar_code_url)
+        {
+            int id = Int32.Parse(id_doc_gia);
+            QuanLyThuVienEntities data = new QuanLyThuVienEntities();
+            DocGia dg = (   from d in data.DocGias
+                            where d.id_doc_gia == id
+                            select d).First();
+            dg.bar_code = bar_code;
+            dg.bar_code_url = bar_code_url;
+            data.SaveChanges();
+            return RedirectToAction("PhatSinhMaVach");                      
         }
     }
 }
