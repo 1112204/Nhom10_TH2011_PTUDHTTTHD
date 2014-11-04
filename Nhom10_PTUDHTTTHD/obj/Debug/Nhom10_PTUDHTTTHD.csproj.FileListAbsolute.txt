@@ -28,3 +28,33 @@ E:\[VII] - HOC KY VII\PTUDHTTT\Do an\Source\Nhom10_PTUDHTTTHD\Nhom10_PTUDHTTTHD\
 E:\[VII] - HOC KY VII\PTUDHTTT\Do an\Source\Nhom10_PTUDHTTTHD\Nhom10_PTUDHTTTHD\obj\Debug\Nhom10_PTUDHTTTHD.csprojResolveAssemblyReference.cache
 E:\[VII] - HOC KY VII\PTUDHTTT\Do an\Source\Nhom10_PTUDHTTTHD\Nhom10_PTUDHTTTHD\obj\Debug\Nhom10_PTUDHTTTHD.dll
 E:\[VII] - HOC KY VII\PTUDHTTT\Do an\Source\Nhom10_PTUDHTTTHD\Nhom10_PTUDHTTTHD\obj\Debug\Nhom10_PTUDHTTTHD.pdb
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\Nhom10_PTUDHTTTHD.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\Nhom10_PTUDHTTTHD.pdb
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\Antlr3.Runtime.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\EntityFramework.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\Microsoft.Web.Infrastructure.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\Newtonsoft.Json.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Net.Http.Formatting.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.Http.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.Http.WebHost.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.Mvc.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.Optimization.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.Providers.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.Razor.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.WebPages.Deployment.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.WebPages.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.WebPages.Razor.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\WebGrease.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\EntityFramework.xml
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\Newtonsoft.Json.xml
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Net.Http.Formatting.xml
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.Http.xml
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.Http.WebHost.xml
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.Mvc.xml
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.Razor.xml
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.WebPages.xml
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.WebPages.Deployment.xml
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\bin\System.Web.WebPages.Razor.xml
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\obj\Debug\Nhom10_PTUDHTTTHD.csprojResolveAssemblyReference.cache
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\obj\Debug\Nhom10_PTUDHTTTHD.dll
+E:\OpenSources\Nhom10_TH2011_PTUDHTTTHD\Nhom10_PTUDHTTTHD\obj\Debug\Nhom10_PTUDHTTTHD.pdb
